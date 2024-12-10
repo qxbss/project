@@ -1,0 +1,1466 @@
+h1 ,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+p {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol,
+li,
+span {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+
+.menu-item {
+    position: relative;
+    text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
+
+.menu-item1 {
+    position: relative;
+    text-decoration: none;
+	color: #a3a3a3;
+	font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+a.menu-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease;
+}
+
+a.menu-item:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-item1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #a3a3a3;
+    transform: scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease;
+}
+
+.menu-item1:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-list {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Вертикальное меню */
+}
+
+.menu-item.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 20px; /* Небольшой внутренний отступ */
+    margin-top: 10px; /* Отступ от кнопки "About" */
+    border-radius: 4px;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    align-items: center;
+}
+
+/* Убираем подчеркивание на ссылках в подменю */
+.submenu a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
+    display: block;
+    white-space: nowrap;
+}
+
+/* Плавное появление подменю */
+.menu-item.dropdown:hover .submenu {
+    max-height: 200px;
+    opacity: 1;
+
+}
+
+
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: #fff;
+    z-index: 211;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Начальная позиция ниже текста */
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0); /* Сжатие линии */
+    transform-origin: left; /* Линия "растягивается" слева направо */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
+.header {
+    padding: 35px 0 60px 0;
+    position: relative;
+   }
+
+.intro {
+    position: relative;
+    height: 100vh;
+    
+}
+
+.intro_media {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.intro_media video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.intro_content {
+    z-index: 10;
+}
+
+.hamburger {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255, 0.0);
+    outline: none;
+    border: none;
+    top: 25px;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.hamburger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: background-color .5s, opacity .25s, transform .5s;
+    will-change: transform;
+    z-index: 999;
+}
+
+.hamburger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.hamburger span:nth-child(2) {
+}
+
+.hamburger span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.hamburger_active span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.hamburger_active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_active span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+.mnhover:hover >ul {
+    display: initial;
+    transition: all 500ms ease;
+}
+
+.mnhover:before >ul {
+
+    transition: all 500ms ease;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+  100%{
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 90%;  
+    margin: 0 auto;
+    flex: 1;
+}
+
+
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery {
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    transition: transform .5s, visibility .2s;
+    will-change: transform;
+    transform: translateX(100%);
+    z-index: 20; 
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75%;
+    flex-direction: column;
+}
+
+.menu_active {
+    transform: translateX(0%);
+    visibility: visible;
+}
+.convid {
+    position: relative;
+    height: auto;
+}
+.convid .overlay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    position: relative;
+}
+
+.convid .overlay .fashion1 {
+    height: 430px;
+    width: 645px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255, 0.5);
+}
+
+.convid .overlay .fashion1 video {
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.convid .overlay .fashion1:hover video {
+    transform: scale(1.1);
+}
+
+.convid .popup-video {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: rgba(0,0,0,1);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease,  visibility 0.5s ease;;
+}
+.convid .popup-video.active {
+    visibility: visible; 
+    opacity: 1; 
+}
+.convid .popup-video video {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 850px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 3px solid #fff;
+}
+
+.convid .popup-video span {
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.fashion1 {
+    position: relative; 
+    height: 430px;
+    width: 645px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.popup-title {
+    position: absolute;
+   bottom: 5%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    z-index: 10; 
+    font-family: "Montserrat", sans-serif;
+    width: 570px;
+}
+
+/* Стрелки для переключения */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    z-index: 100;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: #1e1e1e; 
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px; 
+}
+
+.popup-video .arrow-left,
+.popup-video .arrow-right {
+    visibility: hidden;
+}
+
+.menu-list {
+    position: relative;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-title {
+    position: absolute;
+    top: 5%;
+    left: 5%; 
+    color: white;
+    font-size: 16px; 
+    font-weight: 700; 
+    text-align: left; 
+    z-index: 5; 
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 
+        0px 2px 4px rgba(0, 0, 0, 0.6),
+        0px 1px 2px rgba(0, 0, 0, 0.6); 
+
+        opacity: 0.9;
+    line-height: 1.3;
+}
+
+.directed-title .directed {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.video-title .brand {
+    font-size: 20px; /* Размер текста для бренда */
+    font-weight: 800;
+}
+
+.directed-title {
+    position: absolute;
+    bottom: 5%;
+    right: 5%; 
+    color: white;
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: right; 
+    z-index: 5; 
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 
+        0px 2px 4px rgba(0, 0, 0, 0.6),
+        0px 1px 2px rgba(0, 0, 0, 0.6);
+        opacity: 0.9;
+}
+
+.bio {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+
+.bio-content {
+    flex: 1; /* Текст займет все доступное пространство */
+}
+
+.bio-image-container {
+    float: left; /* Обтекание контейнера */
+    margin-right: 15px; /* Отступ справа от текста */
+    margin-bottom: 15px; /* Отступ снизу */
+    width: 30%; /* Ширина контейнера */
+}
+
+.bio-img {
+    width: 100%; /* Изображение занимает ширину контейнера */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: block;
+}
+
+.photo-credit {
+    font-size: 14px; 
+    color: #aaa; 
+    font-style: italic; 
+    text-align: center; /* Центрирование подписи под изображением */
+    margin-top: 5px; /* Отступ от изображения */
+}
+
+.bio-content {
+    overflow: hidden; /* Чтобы текст не "убегал" из родителя */
+}
+
+.bio-text {
+    font-size: 36px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 30px 50px;
+}
+
+.bio-subtitle {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify; 
+    margin-bottom: 35px;
+}
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 15px 0;
+    gap: 200px;
+}
+
+.footer-rights, .footer-back-to-top, .footer-logo {
+    flex: 1; /* Все блоки занимают равное пространство */
+    text-align: center;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.footer-back-to-top a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    font-weight: 800;
+}
+
+.footer-back-to-top a:hover {
+    color: #fff;
+}
+
+.footer-rights {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-resume {
+    display: block;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: #cecece;
+}
+
+.btn-resume-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.policy-heading {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Стиль для абзацев */
+.policy-paragraph {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/* Стили для контактных данных */
+.contact-info {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.privacy {
+    line-height: 1.5;
+}
+
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #f5f5f5;
+    padding: 20px 50px;
+    z-index: 9;
+}
+
+.cookie-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cookie-message {
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.cookie-message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cookie-buttons {
+    white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+
+.btn-cookie {
+    padding: 15px 40px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#accept-all {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    border: solid 2px #000;
+}
+
+#reject-all {
+    border: 2px solid #000;
+    color: #000;
+    font-weight: 500;
+}
+
+#customize {
+    border: 2px solid #000;
+    color: #000;
+    font-weight: 500;
+}
+
+.btn-cookie:hover {
+    opacity: 0.8;
+}
+
+#space-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    opacity: 0; /* Начальная прозрачность */
+    visibility: hidden; /* Элемент скрыт */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#space-cover.active {
+    opacity: 1; /* Видимый фон */
+    visibility: visible;
+}
+
+/* Cookie Settings Popup */
+.cookie-popup {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 845px;
+    height: 80vh;
+    background: #fff;
+    padding: 20px;
+    z-index: 25;
+    transition: bottom 0.5s ease-in-out;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-popup.active {
+    bottom: 10%;
+}
+
+.cookie-popup-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Добавляем прокрутку */
+    padding-right: 10px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+    z-index: 12;
+}
+
+.popup-close:hover {
+    color: #007bff;
+}
+
+.popup-header {
+    position: sticky; /* Делает заголовок фиксированным при прокрутке */
+    top: 0;
+    background-color: #f7f7f7; /* Добавляем отличающийся фон */
+    z-index: 10; /* Убедимся, что заголовок всегда сверху */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc; /* Легкая граница снизу */
+    text-align: center;
+}
+
+.popup-subtitle {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.popup-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Показывать максимум 3 строки */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.popup-description.expanded {
+    -webkit-line-clamp: unset; /* Убираем ограничение строк */
+    display: block;
+}
+
+
+.popup-more {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.popup-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.popup-more:hover {
+    text-decoration: underline;
+}
+
+/* Cookie Categories */
+.cookie-category {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    
+}
+
+.cookie-category-container {
+
+    padding-right: 10px; /* Для предотвращения перекрытия с полосой прокрутки */
+    margin: 25px 0;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between; /* Раздвигает элементы влево и вправо */
+    align-items: center; /* Выравнивает элементы вертикально */
+    margin: 10px 0;
+}
+
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0; /* Убирает лишние отступы */
+}
+
+.category-description {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.category-status {
+    font-size: 14px;
+    color: #28a745; /* Зеленый цвет */
+    font-weight: bold;
+    margin: 0; /* Убирает лишние отступы */
+}
+
+/* Toggle switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Popup buttons */
+.popup-buttons {
+    position: sticky; /* Закрепляем кнопки внутри контейнера */
+    bottom: 0; /* Размещаем кнопки внизу */
+    background-color: #fff; /* Белый фон, чтобы кнопки выделялись */
+    z-index: 10; /* Убедимся, что кнопки отображаются поверх других элементов */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Равномерно размещаем кнопки */
+    border-top: 1px solid #ccc; /* Граница сверху для отделения */
+}
+
+.btn-popup {
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-popup.reject {
+    border: 2px solid #000;
+    color: #000;
+    font-weight: 500;
+}
+
+.btn-popup.save {
+    border: 2px solid #000;
+    color: #000;
+    font-weight: 500;
+}
+
+.btn-popup.accept {
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px #000;
+}
+
+.btn-popup:hover {
+    opacity: 0.8;
+}
+
+.cookie-content {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.logo-contact {
+    width:50%;
+    height: auto;
+}
+
+/* General container */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    max-width: 50%;
+    flex: 1; 
+}
+
+/* Form styling */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form rows for inputs */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Input and Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: calc(50% - 10px); /* 50% width for paired inputs */
+    padding: 15px;
+    border: 1px solid #000;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    max-width: 100%; /* Full width for textarea */
+    resize: none; /* Prevent resizing */
+}
+
+/* Full-width inputs */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    max-width: 100%; /* Full-width for single-row fields */
+}
+
+/* Submit button */
+.submit-button {
+    padding: 20px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #cecece;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.info {
+    width: 50%;
+    text-align: center;
+    flex: 1;
+}
+
+.contact-info {
+    text-align: center;
+    color: #fff;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.contact-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-detail {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-address {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.menu_logo {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.settings-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #252525; 
+    border-radius: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+    z-index: 8;
+    transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: #333; 
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    padding-right: 15px; 
+}
+
+.cookie-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.awards-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    min-height: 300px;
+    margin-bottom: 100px;
+}
+
+
+.awards-text {
+    float: left;
+    font-size: 18px;
+    color: white;
+    line-height: 1.3;
+    flex: 1; /* Элемент занимает всю доступную ширину */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 20px 50px; /* Добавим отступы для комфорта */
+    display: block; /* Убираем центровку текста по вертикали */
+}
+
+.awards-header {
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0 50px 0;
+    margin: 0;
+}
+
+  
+  /* Настройка изображений */
+
+
+  .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 10px;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.photo {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo1 { background-image: url('/img/1 DIOR - Francis Lawrence/DIVING_BOARD-still.jpg'); grid-column: span 2; grid-row: span 2; }
+  .photo2 { background-image: url('/img/2 Tiffany& & Co. - Francis Lawrence/image21.jpeg'); }
+  .photo3 { background-image: url('/img/3 Smirnoff - Jessy Terrero/10-15-st-ice-can-kv-horizontal.jpg'); }
+  .photo4 { background-image: url('/img/4 Motorola - Luke Gilford/DIGITAL Julia Garner Moto 2.png'); grid-row: span 2; }
+  .photo5 { background-image: url('/img/5 Loreal - Patrick Hoelck/WOW.png'); grid-column: span 2; }
+  .photo6 { background-image: url('/img/6 Renault - Jeff Ludes/739_9V5EEe_jeff_ludes_megane_03.jpg'); }
+  .photo7 { background-image: url('/img/7 LV - Jacob Sutton/LOUIS_VUITTON_1.jpg'); }
+  .photo8 { background-image: url('/img/8 ZEGNA - Craig Mcdean/ZEGNA_9.jpg');  grid-column: span 3; grid-row: span 1;}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнение */
+    display: flex;
+    flex-direction: column; /* Элементы будут выстраиваться вертикально */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0; 
+    transition: opacity 0.7s ease, background-color 0.7s ease; 
+}
+
+.photo-title, .photo-description {
+    font-size: 18px;
+    text-align: center; 
+    margin: 5px 0; 
+}
+.photo-description {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.photo:hover .photo-overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Галерея оверлей */
+.gallery-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1); /* Затемнение */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Плавная анимация появления */
+}
+
+/* Когда галерея активна */
+.gallery-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Плавное исчезновение */
+}
+
+/* Содержимое попапа */
+.gallery-content {
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    background-color: rgba(255,255,255, 0.0);
+    border-radius: 20px;
+    padding: 40px ;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+/* Когда содержимое должно быть видимым */
+.gallery-overlay.active .gallery-content {
+    opacity: 1;
+    transform: scale(1); /* Плавное появление содержимого */
+}
+
+
+  .gallery-close {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    z-index: 8;
+  }
+
+  .gallery-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+  
+  .gallery-main {
+    position: relative; /* Для позиционирования стрелок */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery-main img {
+    max-width: 70vw;
+    max-height: 60vh;
+    border-radius: 8px;
+  }
+  
+  .gallery-arrow {
+    position: absolute;
+    top: 50%; /* Центрируем стрелку по вертикали */
+   transform: translateY(-50%);
+    z-index: 10;
+    width: 50px; /* Размер круга */
+    height: 50px; /* Размер круга */
+    background-color: rgba(255, 255, 255, 0.3); /* Задний фон */
+    backdrop-filter: blur(1px);
+    border-radius: 50%; /* Делаем фон круглым */
+    color: white; /* Цвет стрелки */
+    font-size: 30px; /* Размер стрелки */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    line-height: 45px; /* Совпадает с высотой элемента */
+    text-align: center; /* Центрирование текста */
+}
+
+.gallery-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Светлый фон при наведении */
+    color: black; /* Чёрный цвет стрелки */
+    transform: translateY(-50%) scale(1.1); /* Небольшое увеличение при наведении */
+}
+
+.left-arrow {
+    left: 10px;
+}
+.right-arrow {
+    right: 10px;
+}
+
+  
+  .gallery-info {
+    text-align: center;
+  }
+  
+  .gallery-preview {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .gallery-preview img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity .5s ease;
+  }
+  
+  .gallery-preview img:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+
+#photoTitle {
+    color: #fff;
+    font-size: 16px;
+}
+#photoDescription {
+    color: #fff;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.gallery-info {
+    padding: 20px 0;
+}
+  
+.awards-page .arrow-left,
+.awards-page .arrow-right {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cookie-popup {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .popup-header {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .popup-description {
+        font-size: 13px;
+        max-height: 80px;
+    }
+
+    .popup-buttons .btn-popup {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .cookie-notification {
+        padding: 15px;
+    }
+
+    .cookie-notification .btn-cookie {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+/* Медиа-запрос для устройств шириной 480px */
+@media (max-width: 480px) {
+    .cookie-popup {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .popup-header {
+        font-size: 16px;
+    }
+
+    .popup-description {
+        font-size: 12px;
+        max-height: 70px;
+    }
+
+    .popup-buttons {
+        flex-direction: column;
+    }
+
+    .popup-buttons .btn-popup {
+        font-size: 12px;
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .cookie-notification {
+        padding: 10px;
+    }
+
+    .cookie-notification .cookie-message {
+        font-size: 12px;
+    }
+
+    .cookie-notification .btn-cookie {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .popup-more {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        width: 75%; /* Ещё больше увеличиваем ширину для удобства */
+    }
+
+    .logo {
+        font-size: 14px; /* Уменьшаем размер логотипа */
+        white-space: normal; /* Разрешаем перенос текста */
+        line-height: 1.3; /* Добавляем межстрочное расстояние */
+        word-wrap: break-word; /* Переносим длинные слова */
+        font-weight: 800;
+    }
+
+    .hamburger {
+        top: 4%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 2px;
+    }
+}

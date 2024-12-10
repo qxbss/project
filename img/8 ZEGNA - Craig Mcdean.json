@@ -1,0 +1,25 @@
+
+{
+    "images": [
+        {
+            "src": "/img/8 ZEGNA - Craig Mcdean/ZEGNA_8.jpg",
+            "title": "Jessy Terrero",
+            "description": "Описание для первого изображения"
+        },
+        {
+            "src": "/img/8 ZEGNA - Craig Mcdean/ZEGNA_9.jpg",
+            "title": "Jessy Terrero",
+            "description": "Описание для второго изображения"
+        },
+        {
+            "src": "/img/8 ZEGNA - Craig Mcdean/ZEGNA_10.jpg",
+            "title": "Jessy Terrero",
+            "description": "Описание для второго изображения"
+        },
+        {
+            "src": "/img/8 ZEGNA - Craig Mcdean/ZEGNA_11.jpg",
+            "title": "Jessy Terrero",
+            "description": "Описание для второго изображения"
+        }
+    ]
+}

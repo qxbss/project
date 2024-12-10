@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOIN - HEATHER HELLER | PRODUCER</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="space-cover"></div>
+ <!-- Cookie Notification -->
+<div class="cookie-notification" id="cookie-notification">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h2 class="cookie-header">We value your privacy</h2>
+        <p class="cookie-message">
+        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
+        By clicking "Accept All", you consent to our use of cookies. See our 
+        <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>.
+        </div>
+    </p>
+    <div class="cookie-buttons">
+        <button class="btn-cookie" id="customize">Customize</button>
+        <button class="btn-cookie" id="reject-all">Reject All</button>
+        <button class="btn-cookie" id="accept-all">Accept All</button>
+    </div>
+    </div>
+</div>
+
+<button id="cookie-settings-button" class="btn-cookie settings-button" style="display: none;">
+    <img src="img/cookie.png" alt="cookie" class="cookie-icon">
+</button>
+
+<!-- Space-cover for background dimming -->
+<div class="space-cover" id="space-cover"></div>
+
+<!-- Cookie Settings Popup -->
+<div class="cookie-popup" id="cookie-popup">
+    <div class="cookie-popup-content">
+        <button class="popup-close" id="popup-close">&times;</button>
+        <h3 class="popup-header">Customize Consent Preferences</h3>
+        <p class="popup-subtitle">
+            We believe that the privacy and security of your information and data is very important.
+        </p>
+        <p class="popup-description">
+            We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. 
+            <!-- <a href="#" class="popup-more">Show more</a> -->
+        </p>
+
+        <div class="cookie-category-container">
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Necessary</h4>
+                    <p class="category-status">Always Active</p>
+                </div>
+                <p class="category-description">
+                    Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
+                </p>
+            </div>
+    
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Functional</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="functional-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Functional cookies help perform certain functionalities like sharing the content of the website on social media.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Analytics</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="analytics-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Performance</h4>
+                <label class="toggle">
+                    <input type="checkbox"  id="performance-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Advertisement</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="advertisement-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">
+                        Uncategorized</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="uncategorized-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+                </p>
+            </div>
+        </div> 
+       
+
+        <!-- Popup Buttons -->
+        <div class="popup-buttons">
+            <button class="btn-popup reject" id="reject-all-popup">Reject All</button>
+            <button class="btn-popup save" id="save-preferences">Save My Preferences</button>
+            <button class="btn-popup accept" id="accept-all-popup">Accept All</button>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <header class="header">
+            <div class="wrapper">
+                <a href="index.html" class="logo">HEATHER HELLER | PRODUCER</a>
+                <div class="menu">
+                    <a class="hamburger" id="burger">
+                        <span></span><span></span><span></span>
+                    </a>
+                    <nav class="menu-list">
+                        <a class="menu-item" href="motion.html">Motion</a>
+                        <a class="menu-item" href="print.html">Print</a>
+                        <a class="menu-item" href="music-videos.html">Music Videos</a>
+                        
+                        <!-- Кнопка About -->
+                        <div class="menu-item dropdown">
+                            <a href="#" class="menu-item">About</a>
+                            <!-- Подменю -->
+                            <div class="submenu">
+                                <a class="menu-item1" href="bio.html">Bio</a>
+                                <a class="menu-item1" href="awards.html">Awards</a>
+                            </div>
+                        </div>
+                        
+                        <a class="menu-item" href="contact.html">Contact</a>
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="#" class="menu_logo" width="100px" height="100px">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <section class="convid">
+        <div class="overlay">
+            <div class="fashion1">
+                <h2 class="video-title">
+                    <span class="brand">Joji & Diplo</span>
+                    "Daylight"
+                </h2>
+                <h2 class="directed-title"><span class="directed">Director</span>
+                    Munachi Osegbu</h2>
+                <video src="video/music-videos/26 - Joji & Diplo - Daylight.mp4" data-title="Joji & Diplo | Daylight | Director Munachi Osegbu" poster="video/music-videos/Thumbnails/26.jpg"></video>
+            </div>
+            <div class="fashion1">
+                <h2 class="video-title">
+                    <span class="brand">KESHA</span>
+                    "RAISING HELL"
+                </h2>
+                <h2 class="directed-title"><span class="directed">Director</span>
+                    LUKE GILFORD</h2>
+                <video src="video/music-videos/1.mp4" data-title="Kesha | Raising HELL | Director LUKE GILFORD" poster="video/music-videos/Thumbnails/1.png"></video>
+            </div>
+            <div class="fashion1">
+                <h2 class="video-title">
+                    <span class="brand">SELENA GOMEZ</span>
+                    "COME AND GET IT"
+                </h2>
+                <h2 class="directed-title"><span class="directed">Director</span>
+                    Anthony Mandler</h2>
+                <video src="video/music-videos/2.mp4" data-title="SELENA GOMEZ | COME AND GET IT | Director Anthony Mandler" poster="video/music-videos/Thumbnails/2.png"></video></div>
+            <div class="fashion1">
+                <h2 class="video-title">
+                    <span class="brand">CHERYL Cole</span>
+                    "Call my name"
+                </h2>
+                <h2 class="directed-title"><span class="directed">Director</span>
+                    Anthony Mandler</h2>
+                <video src="video/music-videos/3.mp4" data-title="CHERYL COLE | CALL MY NAME | Director Anthony Mandler" poster="video/music-videos/Thumbnails/3.png"></video></div>
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">JUSTIN BEIBER</span>
+                        "AS LONG AS YOU LOVE ME"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Anthony Mandler</h2>
+                    <video src="video/music-videos/4.mp4" data-title="JUSTIN BEIBER | AS LONG AS YOU LOVE ME | Director Anthony Mandler" poster="video/music-videos/Thumbnails/4.png"></video>
+                </div>
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">LADY GAGA</span>
+                            "BAD ROMANCE"
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span> 
+                            Francis Lawrence</h2>
+                        <video src="video/music-videos/5.mp4" data-title="LADY GAGA | BAD ROMANCE | Director Francis Lawrence>" poster="video/music-videos/Thumbnails/5.png"></video></div>
+                        <div class="fashion1">
+                            <h2 class="video-title">RIHANNA<br>"DIAMONDS"</h2>
+                            <h2 class="directed-title"><span class="directed">Director</span> 
+                                Anthony Mandler</h2>
+                            <video src="video/music-videos/6.mp4" data-title="RIHANNA | DIAMONDS | Director Anthony Mandler" poster="video/music-videos/Thumbnails/6.png"></video></div>
+                            <div class="fashion1">
+                                <h2 class="video-title">JAY-Z<br>"HOLY GRAIL"<br>ft. JUSTIN TIMBERLAKE</h2>
+                                <h2 class="directed-title"><span class="directed">Director</span>
+                                    Anthony Mandler</h2>
+                                <video src="video/music-videos/7.mp4" data-title="JAY-Z | HOLY GRAIL FT. JUSTIN TIMBERLAKE | Director Anthony Mandler" poster="video/music-videos/Thumbnails/7.png"></video></div>
+                                <div class="fashion1">
+                                    <h2 class="video-title">TAYLOR SWIFT<br>"I KNEW YOU WERE TROUBLE"</h2>
+                                    <h2 class="directed-title"><span class="directed">Director</span>
+                                        Anthony Mandler</h2>
+                                    <video src="video/music-videos/8.mp4" data-title="TAYLOR SWIFT | I KNEW YOU WERE TROUBLE | Director Anthony Mandler" poster="video/music-videos/Thumbnails/8.png"></video></div>
+                                    <div class="fashion1">
+                                        <h2 class="video-title">TAYLOR SWIFT<br>"22"</h2>
+                                        <h2 class="directed-title"><span class="directed">Director</span>
+                                            Anthony Mandler</h2>
+                                        <video src="video/music-videos/9.mp4" data-title="TAYLOR SWIFT | 22 | Director Anthony Mandler" poster="video/music-videos/Thumbnails/9.png"></video></div>
+                                        <div class="fashion1">
+                                            <h2 class="video-title">THE WEEKEND<br>"YOU BELONG TO THE WORLD"</h2>
+                                            <h2 class="directed-title"><span class="directed">Director</span>
+                                                Anthony Mandler</h2>
+                                            <video src="video/music-videos/10.mp4" data-title="THE WEEKEND | YOU BELONG TO THE WORLD | Director Anthony Mandler" poster="video/music-videos/Thumbnails/10.png"></video></div>
+                                            <div class="fashion1">
+                                                <h2 class="video-title">DEMI LOVATO<br>"MADE IN THE USA"</h2>
+                                                <h2 class="directed-title"><span class="directed">Director</span>
+                                                    Ryan Palotta</h2>
+                                                <video src="video/music-videos/11.mp4" data-title="DEMI LOVATO | MADE IN THE USA | Director Ryan Palotta" poster="video/music-videos/Thumbnails/11.png"></video></div>
+                                                <div class="fashion1">
+                                                    <h2 class="video-title">LANA DEL REY<br>"RIDE"</h2>
+                                                    <h2 class="directed-title"><span class="directed">Director</span>
+                                                        Anthony Mandler</h2>
+                                                    <video src="video/music-videos/12.mp4" data-title="LANA DEL REY | RIDE | Director Anthony Mandler" poster="video/music-videos/Thumbnails/12.png"></video></div>
+                                                    <div class="fashion1">
+                                                        <h2 class="video-title">LANA DEL REY<br>"TROPICO"</h2>
+                                                        <h2 class="directed-title"><span class="directed">Director</span>
+                                                            Anthony Mandler</h2>
+                                                        <video src="video/music-videos/13.mp4" data-title="LANA DEL REY | TROPICO | Director Anthony Mandler" poster="video/music-videos/Thumbnails/13.png"></video></div>
+                                                        <div class="fashion1">
+                                                            <h2 class="video-title">Fun<br>"Some NIGHTS"</h2>
+                                                            <h2 class="directed-title"><span class="directed">Director</span>
+                                                                Anthony Mandler</h2>
+                                                            <video src="video/music-videos/14.mp4" data-title="FUN | SOME NIGHTS | Director Anthony Mandler" poster="video/music-videos/Thumbnails/14.png"></video></div>
+                                                            <div class="fashion1">
+                                                                <h2 class="video-title">FUN<br>"Carry ON"</h2>
+                                                                <h2 class="directed-title"><span class="directed">Director</span>
+                                                                    Anthony Mandler</h2>
+                                                                <video src="video/music-videos/15.mp4" data-title="FUN | CARRY ON | Director Anthony Mandler" poster="video/music-videos/Thumbnails/15.png"></video></div>
+                                                                <div class="fashion1">
+                                                                    <h2 class="video-title">LANA DEL REY<br>"NATIONAL ANTHEM"</h2>
+                                                                    <h2 class="directed-title"><span class="directed">Director</span>
+                                                                        Anthony Mandler</h2>
+                                                                    <video src="video/music-videos/16.mp4" data-title="LANA DEL REY | NATIONAL ANTHEM | Director Anthony Mandler" poster="video/music-videos/Thumbnails/16.png"></video></div>
+                                                                    <div class="fashion1">
+                                                                        <h2 class="video-title">Muse<br>"Madness"</h2>
+                                                                        <h2 class="directed-title"><span class="directed">Director</span>
+                                                                            Anthony Mandler</h2>
+                                                                        <video src="video/music-videos/17.mp4" data-title="Muse | Madness | Director Anthony Mandler" poster="video/music-videos/Thumbnails/17.png"></video></div><div class="fashion1">
+                                                                            <h2 class="video-title">Britney Spears<br>"CIRCUS"</h2>
+                                                                            <h2 class="directed-title"><span class="directed">Director</span>
+                                                                                Francis Lawrence</h2>
+                                                                            <video src="video/music-videos/18.mp4" data-title="Britney Spears | CIRCUS | Director Francis Lawrence" poster="video/music-videos/Thumbnails/18.png"></video></div>
+                                                                     
+                                
+        </div>
+        <div class="popup-video">
+            <span>&times;</span>
+            <video src="video/1.mp4" controls></video>
+            <h3 class="popup-title"></h3>
+            <div class="arrow-left">&#8592;</div>
+            <div class="arrow-right">&#8594;</div>
+        </div>
+    </section>
+       </div>
+       <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-rights">
+                © 2024 Heather Heller. All rights reserved.
+            </div>
+            <div class="footer-back-to-top">
+                <a href="#top">Back to top</a>
+            </div>
+                        <div class="footer-logo">
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+</html>

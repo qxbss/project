@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEATHER HELLER | PRODUCER</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- <h1 style="font-size: 50px; color: #fff; z-index: 1000; position: absolute;">HI FROM THE OTHER SIDE</h1> -->
+    
+ <!-- Cookie Notification -->
+<div class="cookie-notification" id="cookie-notification">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h2 class="cookie-header">We value your privacy</h2>
+        <p class="cookie-message">
+            We believe that the privacy and security of your information and data is very important.
+        By clicking "Accept All", you consent to our use of cookies. See our 
+        <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>.
+        </div>
+    </p>
+    <div class="cookie-buttons">
+        <button class="btn-cookie" id="customize">Customize</button>
+        <button class="btn-cookie" id="reject-all">Reject All</button>
+        <button class="btn-cookie" id="accept-all">Accept All</button>
+    </div>
+    </div>
+</div>
+
+<button id="cookie-settings-button" class="btn-cookie settings-button" style="display: none;">
+    <img src="img/cookie.png" alt="cookie" class="cookie-icon">
+</button>
+
+<!-- Space-cover for background dimming -->
+<div class="space-cover" id="space-cover"></div>
+
+<!-- Cookie Settings Popup -->
+<div class="cookie-popup" id="cookie-popup">
+    <div class="cookie-popup-content">
+        <button class="popup-close" id="popup-close">&times;</button>
+        <h3 class="popup-header">Customize Consent Preferences</h3>
+        <p class="popup-subtitle">
+            We believe that the privacy and security of your information and data is very important.
+        </p>
+        <p class="popup-description">
+            We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. <br><br>
+            The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. <br><br> We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content that IS relevant to you. These cookies will only be stored in your browser with your prior consent. <br><br>
+            You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience. <br><br> See our
+        <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>. for more information. 
+        </p>
+
+        <div class="cookie-category-container">
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Necessary</h4>
+                    <p class="category-status">Always Active</p>
+                </div>
+                <p class="category-description">
+                    Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
+                </p>
+            </div>
+    
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Functional</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="functional-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Functional cookies help perform certain functionalities like sharing the content of the website on social media.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Analytics</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="analytics-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Performance</h4>
+                <label class="toggle">
+                    <input type="checkbox"  id="performance-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">Advertisement</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="advertisement-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
+                </p>
+            </div>
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h4 class="category-title">
+                        Uncategorized</h4>
+                <label class="toggle">
+                    <input type="checkbox" id="uncategorized-cookies">
+                    <span class="slider"></span>
+                </label>
+                </div>
+                <p class="category-description">
+                    Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+                </p>
+            </div>
+        </div> 
+       
+
+        <!-- Popup Buttons -->
+        <div class="popup-buttons">
+            <button class="btn-popup reject" id="reject-all-popup">Reject All</button>
+            <button class="btn-popup save" id="save-preferences">Save My Preferences</button>
+            <button class="btn-popup accept" id="accept-all-popup">Accept All</button>
+        </div>
+    </div>
+</div>
+
+    <div class="intro">
+        <div class="intro_media">
+            <video src="video/Main page.mp4" autoplay muted loop></video>
+        </div>
+            <div class="container">
+                <header class="header">
+                    <div class="wrapper">
+                        <a href="index.html" class="logo">HEATHER HELLER<br>PRODUCER</a>
+                        <a class="hamburger" id="burger">
+                            <span></span><span></span><span></span>
+                        </a>
+                        <div class="menu">
+                            <nav class="menu-list">
+                                <a class="menu-item" href="motion.html">Motion</a>
+                                <a class="menu-item" href="print.html">Print</a>
+                                <a class="menu-item" href="music-videos.html">Music Videos</a>
+                                
+                                <!-- Кнопка About -->
+                                <div class="menu-item dropdown">
+                                    <a href="#" class="menu-item">About</a>
+                                    <!-- Подменю -->
+                                    <div class="submenu">
+                                        <a class="menu-item1" href="bio.html">Bio</a>
+                                        <a class="menu-item1" href="awards.html">Awards</a>
+                                    </div>
+                                </div>
+                                
+                                <a class="menu-item" href="contact.html">Contact</a>
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="#" class="menu_logo" width="100px" height="100px">
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                                       
+            </header>
+               </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
+

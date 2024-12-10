@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWARDS - HEATHER HELLER | PRODUCER</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="awards-page">
+    <div class="cookie-notification" id="cookie-notification">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h2 class="cookie-header">We value your privacy</h2>
+            <p class="cookie-message">
+            We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
+            By clicking "Accept All", you consent to our use of cookies. See our 
+            <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>.
+            </div>
+        </p>
+        <div class="cookie-buttons">
+            <button class="btn-cookie" id="customize">Customize</button>
+            <button class="btn-cookie" id="reject-all">Reject All</button>
+            <button class="btn-cookie" id="accept-all">Accept All</button>
+        </div>
+        </div>
+    </div>
+    <button id="cookie-settings-button" class="btn-cookie settings-button" style="display: none;">
+        <img src="img/cookie.png" alt="cookie" class="cookie-icon">
+    </button>
+    <!-- Space-cover for background dimming -->
+    <div class="space-cover" id="space-cover"></div>
+    
+    <!-- Cookie Settings Popup -->
+    <div class="cookie-popup" id="cookie-popup">
+        <div class="cookie-popup-content">
+            <button class="popup-close" id="popup-close">&times;</button>
+            <h3 class="popup-header">Customize Consent Preferences</h3>
+            <p class="popup-subtitle">
+                We believe that the privacy and security of your information and data is very important.
+            </p>
+            <p class="popup-description">
+                We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. 
+                <!-- <a href="#" class="popup-more">Show more</a> -->
+            </p>
+    
+            <div class="cookie-category-container">
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Necessary</h4>
+                        <p class="category-status">Always Active</p>
+                    </div>
+                    <p class="category-description">
+                        Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
+                    </p>
+                </div>
+        
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Functional</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="functional-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Functional cookies help perform certain functionalities like sharing the content of the website on social media.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Analytics</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Performance</h4>
+                    <label class="toggle">
+                        <input type="checkbox"  id="performance-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Advertisement</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="advertisement-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
+                    </p>
+                </div>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">
+                            Uncategorized</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="uncategorized-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+                    </p>
+                </div>
+            </div> 
+           
+    
+            <!-- Popup Buttons -->
+            <div class="popup-buttons">
+                <button class="btn-popup reject" id="reject-all-popup">Reject All</button>
+                <button class="btn-popup save" id="save-preferences">Save My Preferences</button>
+                <button class="btn-popup accept" id="accept-all-popup">Accept All</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="wrapper">
+                <a href="index.html" class="logo">HEATHER HELLER | PRODUCER</a>
+                <div class="menu">
+                    <a class="hamburger" id="burger">
+                        <span></span><span></span><span></span>
+                    </a>
+                    <nav class="menu-list">
+                        <a class="menu-item" href="motion.html">Motion</a>
+                        <a class="menu-item" href="print.html">Print</a>
+                        <a class="menu-item" href="music-videos.html">Music Videos</a>
+                        
+                        <!-- Кнопка About -->
+                        <div class="menu-item dropdown">
+                            <a href="#" class="menu-item">About</a>
+                            <!-- Подменю -->
+                            <div class="submenu">
+                                <a class="menu-item1" href="bio.html">Bio</a>
+                                <a class="menu-item1" href="awards.html">Awards</a>
+                            </div>
+                        </div>
+                        
+                        <a class="menu-item" href="contact.html">Contact</a>
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="#" class="menu_logo" width="100px" height="100px">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <div class="awards">
+        <h1 class="awards-header">
+            NOMINATIONS & AWARD-WINNING WORK
+        </h1>
+        <div class="awards-content">
+            <section class="convid">
+                <div class="overlay">
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">TIFFANY & CO.</span>
+                            “BELIEVE IN DREAMS” <br> Ft. Elle Fanning
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span>
+                            Francis Lawrence</h2>
+                        <video src="video/6.mp4" data-title="TIFFANY AND CO. | BELIEVE IN DREAMS Ft. Elle Fanning | Director Francis Lawrence" poster="video/Thumbnails/6.jpg"></video>
+                    </div>
+                                     
+                </div>
+                <div class="popup-video">
+                    <span>&times;</span>
+                    <video src="video/1.mp4"controls></video>
+                    <h3 class="popup-title"></h3>
+                    <div class="arrow-left">&#8592;</div>
+                    <div class="arrow-right">&#8594;</div>
+                </div>
+            </section>
+            <h1 class="awards-text">
+                2019 CLIO AWARDS: <br>
+                AWARDED Bronze Clio in the Fashion & Beauty category
+            </h1>
+        </div>
+        <div class="awards-content">
+            <section class="convid">
+                <div class="overlay">
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">RIHANNA</span>
+                            "DIAMONDS"
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span>
+                            ANTHONY MANDLER</h2>
+                        <video src="video/music-videos/6.mp4" data-title="RIHANNA | DIAMONDS | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/6.png"></video>
+                    </div>
+                                     
+                </div>
+                <div class="popup-video">
+                    <span>&times;</span>
+                    <video src="video/1.mp4"controls></video>
+                    <h3 class="popup-title"></h3>
+                    <div class="arrow-left">&#8592;</div>
+                    <div class="arrow-right">&#8594;</div>
+                </div>
+            </section>
+            <h1 class="awards-text">
+                2013 BET Awards: <br>
+                Video of the Year – Nominated <br>
+                Coca-Cola Viewers' Choice Award – Nominated <br>
+                <br>
+                2013 MTV Video Music Awards Japan: <br>
+                Best Female Video – Nominated <br>
+                Best R&B Video – Nominated <br>
+                <br>
+                2013 iHeartRadio Much Music Video Awards: <br>
+                International Video of the Year - Artist – Nominated
+            </h1>
+        </div>
+        <div class="awards-content">
+            <section class="convid">
+                <div class="overlay">
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">SELENA GOMEZ</span>
+                            "COME AND GET IT"
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span>
+                            ANTHONY MANDLER</h2>
+                        <video src="video/music-videos/2.mp4" data-title="SELENA GOMEZ | COME AND GET IT | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/2.png"></video>
+                    </div>
+                                     
+                </div>
+                <div class="popup-video">
+                    <span>&times;</span>
+                    <video src="video/1.mp4"controls></video>
+                    <h3 class="popup-title"></h3>
+                    <div class="arrow-left">&#8592;</div>
+                    <div class="arrow-right">&#8594;</div>
+                </div>
+            </section>
+            <h1 class="awards-text">
+                2013 MTV Video Music Awards: <br>
+                Best Pop Video – Won <br>
+                <br>
+                2013 YouTube Music Awards: <br>
+                Video of the Year – Nominated <br>
+                <br>
+                2014 MuchMusic Video Awards: <br>
+                International Video of the Year – Artist – Nominated <br>
+            </h1>
+        </div>
+        <div class="awards-content">
+            <section class="convid">
+                <div class="overlay">
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">FUN</span>
+                            "CARRY ON"
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span>
+                            ANTHONY MANDLER</h2>
+                        <video src="video/music-videos/15.mp4" data-title="FUN | CARRY ON | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/15.png"></video>
+                    </div>
+                                     
+                </div>
+                <div class="popup-video">
+                    <span>&times;</span>
+                    <video src="video/1.mp4"controls></video>
+                    <h3 class="popup-title"></h3>
+                    <div class="arrow-left">&#8592;</div>
+                    <div class="arrow-right">&#8594;</div>
+                </div>
+            </section>
+            <h1 class="awards-text">
+                2013 MTV Video Music Awards: <br>
+                Best Pop Video - Nominated <br>
+                Best Direction - Nominated <br>
+            </h1>
+        </div>
+        <div class="awards-content">
+            <section class="convid">
+                <div class="overlay">
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                            <span class="brand">TAYLOR SWIFT</span>
+                            "I KNEW YOU WERE TROUBLE"
+                        </h2>
+                        <h2 class="directed-title"><span class="directed">Director</span>
+                            ANTHONY MANDLER</h2>
+                        <video src="video/music-videos/8.mp4" data-title="TAYLOR SWIFT | I KNEW YOU WERE TROUBLE | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/8.png"></video>
+                    </div>
+                                     
+                </div>
+                <div class="popup-video">
+                    <span>&times;</span>
+                    <video src="video/1.mp4"controls></video>
+                    <h3 class="popup-title"></h3>
+                    <div class="arrow-left">&#8592;</div>
+                    <div class="arrow-right">&#8594;</div>
+                </div>
+            </section>
+            <h1 class="awards-text">
+                2013 MTV Video Music Awards: <br>
+                Best Female Video – Won <br>
+                Video of the Year – Nominated <br>
+                <br>
+                2013 YouTube Music Awards: <br>
+                YouTube Phenomenon – Won <br>
+            </h1>
+        </div>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">LANA DEL REY</span>
+                        "RIDE"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        ANTHONY MANDLER</h2>
+                    <video src="video/music-videos/12.mp4" data-title="LANA DEL REY | RIDE | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/12.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2013 MTV Video Music Awards: <br>
+            Best Cinematography – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Nicki Minaj</span>
+                        "Starships"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        ANTHONY MANDLER</h2>
+                    <video src="video/music-videos/19.mp4" data-title="Nicki Minaj | Starships | DIRECTOR ANTHONY MANDLER" poster="video/music-videos/Thumbnails/19.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2012 MTV Video Music Awards: <br>
+            Best Female Video – Nominated <br>
+            <br>
+            2013 Capital FM's Music Video Awards: <br>
+            Best Video – Nominated <br>
+            Raunchiest Video – Nominated <br>
+            <br>
+            2012 4Music Video Honours: <br>
+            Best R&B/Dance Video – Nominated <br>
+            Best Video – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Lady GAGA</span>
+                        "Bad Romance"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Francis Lawrence</h2>
+                    <video src="video/music-videos/5.mp4" data-title="LADY GAGA | BAD ROMANCE | DIRECTOR FRANCIS LAWRENCE" poster="video/music-videos/Thumbnails/5.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2011 Grammy Awards: <br>
+            Best Short Form Music Video – Won <br>
+            Best Female Pop Vocal Performance – Won <br>
+            <br>
+            2010 MTV Video Music Awards (VMA): <br>
+            Video of the Year – Won <br>
+            Best Female Video – Won <br>
+            Best Pop Video – Won <br>
+            Best Dance Video – Won <br>
+            Best Direction (Francis Lawrence) – Won <br>
+            Best Choreography (Laurieann Gibson) – Won <br>
+            Best Editing (Jarrett Fijal) – Won <br>
+            Best Art Direction (Charles Infante) – Nomi <br>
+            Best Cinematography (Thomas Kloss) – Nominated <br>
+            Best Special Effects (Skulley Effects VFX) – Nominated <br>
+            <br>
+            2010 MTV Europe Music Awards: <br>
+            Best Song – Nominated <br>
+            Best Video – Nominated <br>
+            <br>
+            2010 Camerimage: <br>
+            Best Cinematography in a Music Video (Thomas Kloss) – Nominated <br>
+            <br>
+            2010 International Dance Music Awards: <br>
+            Best Music Video – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Linkin Park</span>
+                        "Crawling"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Brothers Strause</h2>
+                    <video src="video/music-videos/21.mp4" data-title="Linkin Park | CRAWLING | DIRECTOR Brothers Strause" poster="video/music-videos/Thumbnails/21.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2001 MTV Video Music Awards: <br>
+            Best Rock Video – Nominated <br>
+            <br>
+            2002 MTV Video Music Awards Japan: <br>
+            Best Rock Video – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">INDIA.ARIE </span>
+                        "video"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Paul Hunter</h2>
+                    <video src="video/music-videos/22.mp4" data-title="INDIA.ARIE | Video | DIRECTOR Paul Hunter" poster="video/music-videos/Thumbnails/22.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2001 MTV Video Music Awards: <br>
+            MTV2 Award – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">K-Ci & JoJo</span>
+                        "Crazy"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Terry Heller & Sylvain White</h2>
+                    <video src="video/music-videos/23.mp4" data-title="K-Ci & JoJo | Crazy | DIRECTOR Terry Heller & Sylvain White" poster="video/music-videos/Thumbnails/23.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2001 MTV Video Music Awards: <br>
+            Best Video from a Film – Nominated <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Jennifer Lorez</span>
+                        "Waiting for Tonight"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Francis Lawrence</h2>
+                    <video src="video/music-videos/20.mp4" data-title="Jennifer Lorez | Waiting for Tonight | DIRECTOR FRANCIS LAWRENCE" poster="video/music-videos/Thumbnails/20.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2000 MTV Video Music Awards: <br>
+            Best Dance Video – Winner <br>
+            Best Choreography – Nominated <br>
+            <br>
+            2000 International Dance Music Awards: <br>
+            Best Dance Video – Winner <br>
+            <br>
+            2000 Billboard Music Video Awards: <br>
+            Best Video – Nominated <br>
+            Best New-Artist Video – Nominated <br>
+            <br>
+            2000 Music Video Production Association (MVPA) Awards: <br>
+            Pop Video of the Year – Nominated <br>
+            Best Hair – Winner <br>
+        </h1>
+    </div>
+    <div class="awards-content">
+        <section class="convid">
+            <div class="overlay">
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Brian McKnight</span>
+                        "Back at One"
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Francis Lawrence</h2>
+                    <video src="video/music-videos/24.mp4" data-title="Brian McKnight | Back at One | DIRECTOR FRANCIS LAWRENCE" poster="video/music-videos/Thumbnails/24.png"></video>
+                </div>
+                                 
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
+            </div>
+        </section>
+        <h1 class="awards-text">
+            2000 Grammy Awards: <br>
+            Best Short Form Music Video – Nominated <br>
+            Best R&B Album (Back at One album) – Nominated <br>
+            <br>
+            2000 MTV Video Music Awards: <br>
+            Best R&B Video – Nominated <br>
+            <br>
+            2000 NAACP Image Awards: <br>
+            Outstanding Male Artist – Winner <br>
+            <br>
+            2000 Soul Train Music Awards: <br>
+            Best R&B/Soul Single – Male – Nominated <br>
+            Best R&B/Soul Album – Male (Back at One album) – Nominated <br>
+        </h1>
+    </div>
+
+     </div>
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-rights">
+                © 2024 Heather Heller. All rights reserved.
+            </div>
+            <div class="footer-back-to-top">
+                <a href="#top">Back to top</a>
+            </div>
+                        <div class="footer-logo">
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
