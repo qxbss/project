@@ -196,7 +196,7 @@ a.menu-item:hover::after {
 }
 
 .hamburger {
-    position: fixed;
+    position: absolute;
     width: 40px;
     height: 40px;
     background: rgba(255,255,255, 0.0);
@@ -204,7 +204,7 @@ a.menu-item:hover::after {
     border: none;
     top: 25px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -738,7 +738,7 @@ a.menu-item:hover::after {
     height: 80vh;
     background: #fff;
     padding: 20px;
-    z-index: 25;
+    z-index: 250;
     transition: bottom 0.5s ease-in-out;
     line-height: 1.3;
     display: flex;
@@ -812,6 +812,7 @@ a.menu-item:hover::after {
     color: #007bff;
     cursor: pointer;
     text-decoration: underline;
+    font-size: 14px;
 }
 
 .popup-more {
@@ -1176,6 +1177,7 @@ input:checked + .slider:before {
   .photo7 { background-image: url('/img/7 LV - Jacob Sutton/LOUIS_VUITTON_1.jpg'); }
   .photo8 { background-image: url('/img/8 ZEGNA - Craig Mcdean/ZEGNA_9.jpg');  grid-column: span 3; grid-row: span 1;}
 
+
 .photo-overlay {
     position: absolute;
     top: 0;
@@ -1222,7 +1224,7 @@ input:checked + .slider:before {
     background: rgba(0, 0, 0, 1); /* Затемнение */
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 210;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease, visibility 0s 0.5s; /* Плавная анимация появления */
@@ -1366,6 +1368,86 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+
+    .convid .overlay {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .fashion1 {
+        flex: 0 0 48%; /* Устанавливаем ширину 48% для размещения 2-х колонок */
+        max-width: 48%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .fashion1 h2.video-title {
+        font-size: 12px; /* Уменьшаем размер заголовка */
+        line-height: 1.4;
+    }
+
+    .fashion1 h2.directed-title {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+    .convid .overlay .fashion1 {
+        flex: 0 0 95%; /* Две колонки */
+        max-width: 95%;
+        overflow: hidden;
+    }
+
+    /* Попап для видео */
+    .convid .popup-video {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .convid .popup-video video {
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px;
+    }
+    
+
+    .popup-title {
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 0;
+        width: 300px;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        top: 75%;
+        font-size: 24px;
+    }
+
+    /* Футер */
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .footer-rights,
+    .footer-back-to-top,
+    .footer-logo {
+        font-size: 12px;
+    }
+
+    .footer-back-to-top a {
+        font-size: 14px;
+    }
     .cookie-popup {
         padding: 15px;
         max-width: 100%;
@@ -1394,13 +1476,35 @@ input:checked + .slider:before {
         font-size: 12px;
         padding: 8px 10px;
     }
+    .video-title .brand {
+        font-size: 14px; /* Размер текста для бренда */
+        font-weight: 700;
+    }
+    .directed-title {
+        font-size: 10px;
+    }
+
+    .convid .popup-video span {
+        top: 25px;
+        right: 35px;
+    }
+    
 }
 
 /* Медиа-запрос для устройств шириной 480px */
 @media (max-width: 480px) {
+
+    .header {
+        padding: 25px 0 25px 0;
+    }
     .cookie-popup {
         padding: 10px;
         width: 90%;
+    }
+
+    .photo-collage {
+        grid-template-columns: repeat(2, 1fr); /* Одна колонка на мобильных устройствах */
+        grid-auto-rows: minmax(150px, auto); /* Ещё меньше высота строк для мобильных */
     }
 
     .popup-header {
@@ -1438,9 +1542,6 @@ input:checked + .slider:before {
     .popup-more {
         font-size: 12px;
     }
-}
-
-@media (max-width: 480px) {
     .menu {
         width: 75%; /* Ещё больше увеличиваем ширину для удобства */
     }
@@ -1462,5 +1563,84 @@ input:checked + .slider:before {
     .hamburger span {
         width: 25px;
         height: 2px;
+    }
+
+    .photo {
+        background-position: center top;
+    }
+
+    .photo1 {
+        grid-column: span 1;
+    grid-row: span 3;
+    }
+
+    .photo4 {
+        grid-row: span 1;
+    }
+    .photo8 {
+        grid-column: span 2;
+    }
+
+    .gallery-main img {
+        max-width: 90vw;
+        max-height: 60vh;
+        border-radius: 8px;
+      }
+
+    .gallery-arrow{
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .right-arrow  {
+        right: 0;
+    }
+
+    .left-arrow {
+        left: 0;
+    }
+    
+    .bio-subtitle {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .btn-resume {
+        padding: 20px 40px;
+        font-size: 14px;
+    }
+
+    .bio-text {
+        font-size: 26px;
+    }
+
+    .bio-image-container {
+        max-width: 60%;
+        width: 58%;
+    }
+
+    .photo-credit {
+        font-size: 10px;
+    }
+
+    .contact-content {
+       flex-direction: column;
+    }
+
+    .contact-form-container {
+        max-width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .contact-title , .contact-detail {
+        font-size: 14px;
+    }
+    .contact-address {
+        font-size: 12px;
     }
 }
