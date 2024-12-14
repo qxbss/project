@@ -6,375 +6,384 @@
     <title>MOTOIN - HEATHER HELLER | PRODUCER</title>
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 <body>
-
-    <div class="space-cover"></div>
- <!-- Cookie Notification -->
-<div class="cookie-notification" id="cookie-notification">
-    <div class="cookie-content">
-        <div class="cookie-text">
-            <h2 class="cookie-header">We value your privacy</h2>
-        <p class="cookie-message">
-        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
-        By clicking "Accept All", you consent to our use of cookies. See our 
-        <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>.
+    <div class="loading-screen">
+        <div class="wave-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
         </div>
-    </p>
-    <div class="cookie-buttons">
-        <button class="btn-cookie" id="customize">Customize</button>
-        <button class="btn-cookie" id="reject-all">Reject All</button>
-        <button class="btn-cookie" id="accept-all">Accept All</button>
+        <div class="loading-percentage">0%</div>
     </div>
-    </div>
-</div>
-
-<button id="cookie-settings-button" class="btn-cookie settings-button" style="display: none;">
-    <img src="img/cookie.png" alt="cookie" class="cookie-icon">
-</button>
-<!-- Space-cover for background dimming -->
-<div class="space-cover" id="space-cover"></div>
-
-<!-- Cookie Settings Popup -->
-<div class="cookie-popup" id="cookie-popup">
-    <div class="cookie-popup-content">
-        <button class="popup-close" id="popup-close">&times;</button>
-        <h3 class="popup-header">Customize Consent Preferences</h3>
-        <p class="popup-subtitle">
-            We believe that the privacy and security of your information and data is very important.
-        </p>
-        <p class="popup-description">
-            We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. 
-            <!-- <a href="#" class="popup-more">Show more</a> -->
-        </p>
-
-        <div class="cookie-category-container">
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">Necessary</h4>
-                    <p class="category-status">Always Active</p>
-                </div>
-                <p class="category-description">
-                    Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
-                </p>
+<div class="your-page-content">
+    <div class="cookie-notification" id="cookie-notification">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h2 class="cookie-header">We value your privacy</h2>
+            <p class="cookie-message">
+            We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
+            By clicking "Accept All", you consent to our use of cookies. See our 
+            <a href="privacy-policy.html" class="cookie-policy-link">Privacy Policy</a>.
             </div>
+        </p>
+        <div class="cookie-buttons">
+            <button class="btn-cookie" id="customize">Customize</button>
+            <button class="btn-cookie" id="reject-all">Reject All</button>
+            <button class="btn-cookie" id="accept-all">Accept All</button>
+        </div>
+        </div>
+    </div>
     
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">Functional</h4>
-                <label class="toggle">
-                    <input type="checkbox" id="functional-cookies">
-                    <span class="slider"></span>
-                </label>
+    <button id="cookie-settings-button" class="btn-cookie settings-button" style="display: none;">
+        <img src="img/cookie.png" alt="cookie" class="cookie-icon">
+    </button>
+    <!-- Space-cover for background dimming -->
+    <div class="space-cover" id="space-cover"></div>
+    
+    <!-- Cookie Settings Popup -->
+    <div class="cookie-popup" id="cookie-popup">
+        <div class="cookie-popup-content">
+            <button class="popup-close" id="popup-close">&times;</button>
+            <h3 class="popup-header">Customize Consent Preferences</h3>
+            <p class="popup-subtitle">
+                We believe that the privacy and security of your information and data is very important.
+            </p>
+            <p class="popup-description">
+                We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. 
+                <!-- <a href="#" class="popup-more">Show more</a> -->
+            </p>
+    
+            <div class="cookie-category-container">
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Necessary</h4>
+                        <p class="category-status">Always Active</p>
+                    </div>
+                    <p class="category-description">
+                        Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
+                    </p>
                 </div>
-                <p class="category-description">
-                    Functional cookies help perform certain functionalities like sharing the content of the website on social media.
-                </p>
-            </div>
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">Analytics</h4>
-                <label class="toggle">
-                    <input type="checkbox" id="analytics-cookies">
-                    <span class="slider"></span>
-                </label>
+        
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Functional</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="functional-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Functional cookies help perform certain functionalities like sharing the content of the website on social media.
+                    </p>
                 </div>
-                <p class="category-description">
-                    Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
-                </p>
-            </div>
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">Performance</h4>
-                <label class="toggle">
-                    <input type="checkbox"  id="performance-cookies">
-                    <span class="slider"></span>
-                </label>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Analytics</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+                    </p>
                 </div>
-                <p class="category-description">
-                    Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
-                </p>
-            </div>
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">Advertisement</h4>
-                <label class="toggle">
-                    <input type="checkbox" id="advertisement-cookies">
-                    <span class="slider"></span>
-                </label>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Performance</h4>
+                    <label class="toggle">
+                        <input type="checkbox"  id="performance-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+                    </p>
                 </div>
-                <p class="category-description">
-                    Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
-                </p>
-            </div>
-            <div class="cookie-category">
-                <div class="category-header">
-                    <h4 class="category-title">
-                        Uncategorized</h4>
-                <label class="toggle">
-                    <input type="checkbox" id="uncategorized-cookies">
-                    <span class="slider"></span>
-                </label>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">Advertisement</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="advertisement-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
+                    </p>
                 </div>
-                <p class="category-description">
-                    Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
-                </p>
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h4 class="category-title">
+                            Uncategorized</h4>
+                    <label class="toggle">
+                        <input type="checkbox" id="uncategorized-cookies">
+                        <span class="slider"></span>
+                    </label>
+                    </div>
+                    <p class="category-description">
+                        Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+                    </p>
+                </div>
+            </div> 
+           
+    
+            <!-- Popup Buttons -->
+            <div class="popup-buttons">
+                <button class="btn-popup reject" id="reject-all-popup">Reject All</button>
+                <button class="btn-popup save" id="save-preferences">Save My Preferences</button>
+                <button class="btn-popup accept" id="accept-all-popup">Accept All</button>
             </div>
-        </div> 
-       
-
-        <!-- Popup Buttons -->
-        <div class="popup-buttons">
-            <button class="btn-popup reject" id="reject-all-popup">Reject All</button>
-            <button class="btn-popup save" id="save-preferences">Save My Preferences</button>
-            <button class="btn-popup accept" id="accept-all-popup">Accept All</button>
         </div>
     </div>
-</div>
-
-
-    <div class="container">
-        <header class="header">
-            <div class="wrapper">
-                <a href="index.html" class="logo">HEATHER HELLER | PRODUCER</a>
-                <div class="menu">
+    
+    
+        <div class="container">
+            <header class="header">
+                <div class="wrapper">
+                    <a href="index.html" class="logo">HEATHER HELLER | PRODUCER</a>
                     <a class="hamburger" id="burger">
                         <span></span><span></span><span></span>
                     </a>
-                    <nav class="menu-list">
-                        <a class="menu-item" href="motion.html">Motion</a>
-                        <a class="menu-item" href="print.html">Print</a>
-                        <a class="menu-item" href="music-videos.html">Music Videos</a>
-                        
-                        <!-- Кнопка About -->
-                        <div class="menu-item dropdown">
-                            <a href="#" class="menu-item">About</a>
-                            <!-- Подменю -->
-                            <div class="submenu">
-                                <a class="menu-item1" href="bio.html">Bio</a>
-                                <a class="menu-item1" href="awards.html">Awards</a>
+                    <div class="menu">
+                        <nav class="menu-list">
+                            <a class="menu-item" href="motion.html">Motion</a>
+                            <a class="menu-item" href="print.html">Print</a>
+                            <a class="menu-item" href="music-videos.html">Music Videos</a>
+                            
+                            <!-- Кнопка About -->
+                            <div class="menu-item dropdown">
+                                <a href="#" class="menu-item">About</a>
+                                <!-- Подменю -->
+                                <div class="submenu">
+                                    <a class="menu-item1" href="bio.html">Bio</a>
+                                    <a class="menu-item1" href="awards.html">Awards</a>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <a class="menu-item" href="contact.html">Contact</a>
-                        <a href="index.html">
-                            <img src="img/logo.png" alt="#" class="menu_logo" width="100px" height="100px">
-                        </a>
-                    </nav>
+                            
+                            <a class="menu-item" href="contact.html">Contact</a>
+                            <a href="index.html">
+                                <img src="img/logo.png" alt="#" class="menu_logo" width="100px" height="100px">
+                            </a>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-    </header>
-    <section class="convid">
-        <div class="overlay">
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">Maybelline</span>
-                    Tattoo Studio Liner<br> ft. GIGI Hadid
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Maya Margolina</h2>
-                <video src="video/17.Maybelline - TTL x Gigi Hadid_FHD_DOWNLOAD.mp4" data-title="Maybelline | Tattoo Studio Liner ft. GIGI Hadid | Director Maya Margolina" poster="video/Thumbnails/17.png"></video>
-            </div>
-
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">LOUIS VUITTON</span>
-                    HORIZON SOFT<br> ft. Karlie Kloss
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Jacob Sutton</h2>
-                <video src="video/18. LOUIS_VUITTON_ HORIZON_SOFT.mp4" data-title="LOUIS VUITTON | HORIZON SOFT ft. Karlie Kloss | Director Jacob Sutton" poster="video/Thumbnails/18.jpg"></video>
-            </div>
-
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">CHANEL</span>
-                    ROUGE ALLURE VELVET NUIT BLANCHE<br> ft. Margot Robbie
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Karim Sadli</h2>
-                <video src="video/1.mp4" data-title="CHANEL | ROUGE ALLURE VELVET NUIT BLANCHE ft. Margot Robbie | Director Karim Sadli" poster="video/Thumbnails/1.png"></video>
-            </div>
-            
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">Neutrogena</span>
-                    Rapid Wrinkle repair "One Week"<br> ft. Jennifer Garner
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Cass Bird</h2>
-                <video src="video/2.mp4" data-title="Neutrogena | Rapid Wrinkle Repair “One Week” ft. Jennifer Garner | Director Cass Bird" poster="video/Thumbnails/2.png"></video>
-            </div>
-
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">VIVO</span>
-                    X27 <br> ft. Jackson Wang
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Francis Lawrence</h2>
-                <video src="video/3.mp4" data-title="Vivo | X27 ft. Jackson Wang | Director Francis Lawrence" poster="video/Thumbnails/3.png"></video>
-            </div>
-            <div class="fashion1">
-                <h2 class="video-title">
-                    <span class="brand">Motorola</span>
-                    razr 5G <br> ft. Julia Garner
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Luke GIlfrod</h2>
-                <video src="video/19.Julia Garner, Luke GIlfrod, motorola razr 5G   short film.mp4" data-title="Motorola | razr 5G ft. Julia Garner | Director Luke GIlfrod" poster="video/Thumbnails/19.png"></video>
-            </div>
+        </header>
+        <section class="convid">
+            <div class="overlay">
                 <div class="fashion1">
                     <h2 class="video-title">
-                    <span class="brand">Neutrogena</span>
-                    Rapid Wrinkle Repair “One Week” <br> ft. Nicole Kidman
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Cass Bird</h2>
-                    <video src="video/4.mp4" data-title="Neutrogena | Rapid Wrinkle Repair “One Week” ft. Nicole Kidman | Director Cass Bird" poster="video/Thumbnails/4.jpg"></video>
+                        <span class="brand">Maybelline</span>
+                        Tattoo Studio Liner<br> ft. GIGI Hadid
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Maya Margolina</h2>
+                    <video src="video/17.Maybelline - TTL x Gigi Hadid_FHD_DOWNLOAD.mp4" data-title="Maybelline | Tattoo Studio Liner ft. GIGI Hadid | Director Maya Margolina" poster="video/Thumbnails/17.png"></video>
+                </div>
+    
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">LOUIS VUITTON</span>
+                        HORIZON SOFT<br> ft. Karlie Kloss
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Jacob Sutton</h2>
+                    <video src="video/18. LOUIS_VUITTON_ HORIZON_SOFT.mp4" data-title="LOUIS VUITTON | HORIZON SOFT ft. Karlie Kloss | Director Jacob Sutton" poster="video/Thumbnails/18.jpg"></video>
+                </div>
+    
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">CHANEL</span>
+                        ROUGE ALLURE VELVET NUIT BLANCHE<br> ft. Margot Robbie
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Karim Sadli</h2>
+                    <video src="video/1.mp4" data-title="CHANEL | ROUGE ALLURE VELVET NUIT BLANCHE ft. Margot Robbie | Director Karim Sadli" poster="video/Thumbnails/1.png"></video>
+                </div>
+                
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">Neutrogena</span>
+                        Rapid Wrinkle repair "One Week"<br> ft. Jennifer Garner
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Cass Bird</h2>
+                    <video src="video/2.mp4" data-title="Neutrogena | Rapid Wrinkle Repair “One Week” ft. Jennifer Garner | Director Cass Bird" poster="video/Thumbnails/2.png"></video>
+                </div>
+    
+                <div class="fashion1">
+                    <h2 class="video-title">
+                        <span class="brand">VIVO</span>
+                        X27 <br> ft. Jackson Wang
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Francis Lawrence</h2>
+                    <video src="video/3.mp4" data-title="Vivo | X27 ft. Jackson Wang | Director Francis Lawrence" poster="video/Thumbnails/3.png"></video>
                 </div>
                 <div class="fashion1">
                     <h2 class="video-title">
-                    <span class="brand">Smirnoff</span>
-                    Spicy Tamarind <br> ft. Karol G
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Jessy Terrero</h2>
-                    <video src="video/20.Jessy Terrero - Spicy Tamarind - Smirnoff .mp4" data-title="Smirnoff | Spicy Tamarind ft. Karol G | Director Jessy Terrero" poster="video/Thumbnails/20.jpg"></video>
-                </div>
-                <div class="fashion1">
-                    <h2 class="video-title">
-                    <span class="brand">Smirnoff</span>
-                    POCO PICO <br> ft. Karol G
-                </h2>
-                <h2 class="directed-title"><span class="directed">Director</span>
-                    Jessy Terrero</h2>
-                    <video src="video/21.SMIRNOFF – POCO PICO HIGH QUALITY .mp4" data-title="Smirnoff | POCO PICO ft. Karol G | Director Jessy Terrero" poster="video/Thumbnails/21.png"></video>
+                        <span class="brand">Motorola</span>
+                        razr 5G <br> ft. Julia Garner
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Luke GIlfrod</h2>
+                    <video src="video/19.Julia Garner, Luke GIlfrod, motorola razr 5G   short film.mp4" data-title="Motorola | razr 5G ft. Julia Garner | Director Luke GIlfrod" poster="video/Thumbnails/19.png"></video>
                 </div>
                     <div class="fashion1">
                         <h2 class="video-title">
-                            <span class="brand">DIOR</span>
-                            Joy, the new frangrance <br> ft. Jennifer Lawrence
-                        </h2>
-                        <h2 class="directed-title"><span class="directed">Director</span>
-                            Francis Lawrence</h2>
-                        <video src="video/5.mp4" data-title="DIOR | Joy, the new frangrance ft. Jennifer Lawrence | Director Francis Lawrence" poster="video/Thumbnails/5.jpg"></video></div>
+                        <span class="brand">Neutrogena</span>
+                        Rapid Wrinkle Repair “One Week” <br> ft. Nicole Kidman
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Cass Bird</h2>
+                        <video src="video/4.mp4" data-title="Neutrogena | Rapid Wrinkle Repair “One Week” ft. Nicole Kidman | Director Cass Bird" poster="video/Thumbnails/4.jpg"></video>
+                    </div>
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                        <span class="brand">Smirnoff</span>
+                        Spicy Tamarind <br> ft. Karol G
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Jessy Terrero</h2>
+                        <video src="video/20.Jessy Terrero - Spicy Tamarind - Smirnoff .mp4" data-title="Smirnoff | Spicy Tamarind ft. Karol G | Director Jessy Terrero" poster="video/Thumbnails/20.jpg"></video>
+                    </div>
+                    <div class="fashion1">
+                        <h2 class="video-title">
+                        <span class="brand">Smirnoff</span>
+                        POCO PICO <br> ft. Karol G
+                    </h2>
+                    <h2 class="directed-title"><span class="directed">Director</span>
+                        Jessy Terrero</h2>
+                        <video src="video/21.SMIRNOFF – POCO PICO HIGH QUALITY .mp4" data-title="Smirnoff | POCO PICO ft. Karol G | Director Jessy Terrero" poster="video/Thumbnails/21.png"></video>
+                    </div>
                         <div class="fashion1">
                             <h2 class="video-title">
-                                <span class="brand">Tiffany & co.</span>
-                                "believe in dreams" <br> ft. Elle Fanning
+                                <span class="brand">DIOR</span>
+                                Joy, the new frangrance <br> ft. Jennifer Lawrence
                             </h2>
                             <h2 class="directed-title"><span class="directed">Director</span>
                                 Francis Lawrence</h2>
-                            <video src="video/6.mp4" data-title="Tiffany & co. | believe in dreams ft. Elle Fanning | Director Francis Lawrence" poster="video/Thumbnails/6.jpg"></video></div>
+                            <video src="video/5.mp4" data-title="DIOR | Joy, the new frangrance ft. Jennifer Lawrence | Director Francis Lawrence" poster="video/Thumbnails/5.jpg"></video></div>
                             <div class="fashion1">
                                 <h2 class="video-title">
-                                    <span class="brand">Saint Laurent</span>
-                                    "wanted for glow" <br> ft. Zoë Kravitz
+                                    <span class="brand">Tiffany & co.</span>
+                                    "believe in dreams" <br> ft. Elle Fanning
                                 </h2>
                                 <h2 class="directed-title"><span class="directed">Director</span>
-                                    Cass Bird</h2>
-                                <video src="video/7.mp4" data-title="Saint Laurent | wanted for glow ft. Zoë Kravitz | Director Cass Bird" poster="video/Thumbnails/7.jpg"></video></div>
+                                    Francis Lawrence</h2>
+                                <video src="video/6.mp4" data-title="Tiffany & co. | believe in dreams ft. Elle Fanning | Director Francis Lawrence" poster="video/Thumbnails/6.jpg"></video></div>
                                 <div class="fashion1">
                                     <h2 class="video-title">
-                                        <span class="brand">Cartier</span>
-                                        PANTHERE<br> ft. Anabelle Wallis
+                                        <span class="brand">Saint Laurent</span>
+                                        "wanted for glow" <br> ft. Zoë Kravitz
                                     </h2>
                                     <h2 class="directed-title"><span class="directed">Director</span>
                                         Cass Bird</h2>
-                                    <video src="video/8.mp4" data-title="Cartier | PANTHERE ft. Anabelle Wallis| Director Cass Bird" poster="video/Thumbnails/8.jpg"></video></div>
+                                    <video src="video/7.mp4" data-title="Saint Laurent | wanted for glow ft. Zoë Kravitz | Director Cass Bird" poster="video/Thumbnails/7.jpg"></video></div>
                                     <div class="fashion1">
                                         <h2 class="video-title">
-                                            <span class="brand">Apple</span>
-                                            "REAL LIFE STORIES" APPLE WATCH 4
+                                            <span class="brand">Cartier</span>
+                                            PANTHERE<br> ft. Anabelle Wallis
                                         </h2>
                                         <h2 class="directed-title"><span class="directed">Director</span>
-                                            John Hillcoat</h2>
-                                        <video src="video/9.mp4" data-title="Apple | REAL LIFE STORIES APPLE WATCH 4 | Director John Hillcoat" poster="video/Thumbnails/9.jpg"></video></div>
+                                            Cass Bird</h2>
+                                        <video src="video/8.mp4" data-title="Cartier | PANTHERE ft. Anabelle Wallis| Director Cass Bird" poster="video/Thumbnails/8.jpg"></video></div>
                                         <div class="fashion1">
                                             <h2 class="video-title">
-                                                <span class="brand">ERMENEGILDO ZEGNA</span>
-                                                Teamwork <br> ft. Javeier Bardem and Dev Patel
+                                                <span class="brand">Apple</span>
+                                                "REAL LIFE STORIES" APPLE WATCH 4
                                             </h2>
                                             <h2 class="directed-title"><span class="directed">Director</span>
-                                                Craig McDean</h2>
-                                            <video src="video/10.mp4" data-title="ERMENEGILDO ZEGNA | Teamwork ft. Javeier Bardem and Dev Patel | Director Craig McDean" poster="video/Thumbnails/10.png"></video></div>
+                                                John Hillcoat</h2>
+                                            <video src="video/9.mp4" data-title="Apple | REAL LIFE STORIES APPLE WATCH 4 | Director John Hillcoat" poster="video/Thumbnails/9.jpg"></video></div>
                                             <div class="fashion1">
                                                 <h2 class="video-title">
                                                     <span class="brand">ERMENEGILDO ZEGNA</span>
-                                                    Game vs sport<br> ft. Javeier Bardem and Dev Patel
+                                                    Teamwork <br> ft. Javeier Bardem and Dev Patel
                                                 </h2>
                                                 <h2 class="directed-title"><span class="directed">Director</span>
                                                     Craig McDean</h2>
-                                                <video src="video/11.mp4" data-title="ERMENEGILDO ZEGNA | Game vs sport ft. Javeier Bardem and Dev Patel | Director Craig McDean" poster="video/Thumbnails/11.jpg"></video></div>
+                                                <video src="video/10.mp4" data-title="ERMENEGILDO ZEGNA | Teamwork ft. Javeier Bardem and Dev Patel | Director Craig McDean" poster="video/Thumbnails/10.png"></video></div>
                                                 <div class="fashion1">
                                                     <h2 class="video-title">
-                                                        <span class="brand">DOLCE & GABBANA</span>
-                                                        THE ONE GOLD <br> ft. Scarlett Johansson
+                                                        <span class="brand">ERMENEGILDO ZEGNA</span>
+                                                        Game vs sport<br> ft. Javeier Bardem and Dev Patel
                                                     </h2>
                                                     <h2 class="directed-title"><span class="directed">Director</span>
-                                                        Jean Baptiste Mondino</h2>
-                                                    <video src="video/12.mp4" data-title="DOLCE & GABBANA | THE ONE GOLD <br> ft. Scarlett Johansson | Director Jean Baptiste Mondino " poster="video/Thumbnails/12.png"></video></div>
+                                                        Craig McDean</h2>
+                                                    <video src="video/11.mp4" data-title="ERMENEGILDO ZEGNA | Game vs sport ft. Javeier Bardem and Dev Patel | Director Craig McDean" poster="video/Thumbnails/11.jpg"></video></div>
                                                     <div class="fashion1">
                                                         <h2 class="video-title">
-                                                            <span class="brand">MAX FACTOR</span>
-                                                            X Foundation <br> ft. Candice Swanepoel
+                                                            <span class="brand">DOLCE & GABBANA</span>
+                                                            THE ONE GOLD <br> ft. Scarlett Johansson
                                                         </h2>
                                                         <h2 class="directed-title"><span class="directed">Director</span>
-                                                            Anthony Mandler</h2>
-                                                        <video src="video/13.mp4" data-title="MAX FACTOR | X Foundation ft. Candice Swanepoel | Director Anthony Mandler" poster="video/Thumbnails/13.jpg"></video></div>
+                                                            Jean Baptiste Mondino</h2>
+                                                        <video src="video/12.mp4" data-title="DOLCE & GABBANA | THE ONE GOLD <br> ft. Scarlett Johansson | Director Jean Baptiste Mondino " poster="video/Thumbnails/12.png"></video></div>
                                                         <div class="fashion1">
                                                             <h2 class="video-title">
-                                                                <span class="brand">HALLE BERRY</span>
-                                                                CLOSER <br> ft. Halle Berry
+                                                                <span class="brand">MAX FACTOR</span>
+                                                                X Foundation <br> ft. Candice Swanepoel
                                                             </h2>
                                                             <h2 class="directed-title"><span class="directed">Director</span>
-                                                                Francis Lawrence</h2>
-                                                            <video src="video/14.mp4" data-title="Halle Berry | CLOSER ft. Halle Berry | Director Francis Lawrence" poster="video/Thumbnails/14.png"></video></div>
+                                                                Anthony Mandler</h2>
+                                                            <video src="video/13.mp4" data-title="MAX FACTOR | X Foundation ft. Candice Swanepoel | Director Anthony Mandler" poster="video/Thumbnails/13.jpg"></video></div>
                                                             <div class="fashion1">
                                                                 <h2 class="video-title">
-                                                                    <span class="brand">CALVIN KLEIN</span>
-                                                                    collection <br> ft. Lara Stone and Alexander Skarsgård
+                                                                    <span class="brand">HALLE BERRY</span>
+                                                                    CLOSER <br> ft. Halle Berry
                                                                 </h2>
                                                                 <h2 class="directed-title"><span class="directed">Director</span>
-                                                                    Fabien Baron</h2>
-                                                                <video src="video/15.mp4" data-title="CALVIN KLEIN | collection ft. Lara Stone and Alexander Skarsgård | Director Fabien Baron" poster="video/Thumbnails/15.jpg"></video></div>
+                                                                    Francis Lawrence</h2>
+                                                                <video src="video/14.mp4" data-title="Halle Berry | CLOSER ft. Halle Berry | Director Francis Lawrence" poster="video/Thumbnails/14.png"></video></div>
                                                                 <div class="fashion1">
                                                                     <h2 class="video-title">
-                                                                        <span class="brand">HTC</span>
-                                                                        ONE <br> ft. Gary Oldman
+                                                                        <span class="brand">CALVIN KLEIN</span>
+                                                                        collection <br> ft. Lara Stone and Alexander Skarsgård
                                                                     </h2>
                                                                     <h2 class="directed-title"><span class="directed">Director</span>
-                                                                        by Johnny Green </h2>
-                                                                    <video src="video/16.mp4" data-title="HTC | ONE ft. Gary Oldman | Director Johnny Green" poster="video/Thumbnails/16.png"></video></div>
-                                
-        </div>
-        <div class="popup-video">
-            <span>&times;</span>
-            <video src="video/1.mp4"controls></video>
-            <h3 class="popup-title"></h3>
-            <div class="arrow-left">&#8592;</div>
-            <div class="arrow-right">&#8594;</div>
-        </div>
-    </section>
-       </div>
-       <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-rights">
-                © 2024 Heather Heller. All rights reserved.
+                                                                        Fabien Baron</h2>
+                                                                    <video src="video/15.mp4" data-title="CALVIN KLEIN | collection ft. Lara Stone and Alexander Skarsgård | Director Fabien Baron" poster="video/Thumbnails/15.jpg"></video></div>
+                                                                    <div class="fashion1">
+                                                                        <h2 class="video-title">
+                                                                            <span class="brand">HTC</span>
+                                                                            ONE <br> ft. Gary Oldman
+                                                                        </h2>
+                                                                        <h2 class="directed-title"><span class="directed">Director</span>
+                                                                            by Johnny Green </h2>
+                                                                        <video src="video/16.mp4" data-title="HTC | ONE ft. Gary Oldman | Director Johnny Green" poster="video/Thumbnails/16.png"></video></div>
+                                    
             </div>
-            <div class="footer-back-to-top">
-                <a href="#top">Back to top</a>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="video/1.mp4"controls></video>
+                <h3 class="popup-title"></h3>
+                <div class="arrow-left">&#8592;</div>
+                <div class="arrow-right">&#8594;</div>
             </div>
-                        <div class="footer-logo">
-                <a href="privacy-policy.html">Privacy Policy</a>
+        </section>
+           </div>
+           <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-rights">
+                    © 2024 Heather Heller. All rights reserved.
+                </div>
+                <div class="footer-back-to-top">
+                    <a href="#top">Back to top</a>
+                </div>
+                            <div class="footer-logo">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+</div>
     
 <script src="js/main.js"></script>
 </body>
