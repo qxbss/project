@@ -1,3 +1,49 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.querySelector('.loading-screen');
+    const content = document.querySelector('.your-page-content');
+    const percentageText = document.querySelector('.loading-percentage');
+
+    let loadedResources = 0;
+    const totalResources = document.images.length + 1; // Учитываем изображения и основной контент
+
+    const updateProgress = () => {
+        const progress = Math.min(Math.round((loadedResources / totalResources) * 100), 100);
+        percentageText.textContent = `${progress}%`;
+
+        if (progress >= 100) {
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                content.classList.add('visible');
+            }, 500); // Задержка перед скрытием прелоадера
+        }
+    };
+
+    // Увеличение счетчика при загрузке каждого ресурса
+    const incrementLoadedResources = () => {
+        loadedResources += 1;
+        updateProgress();
+    };
+
+    // Отслеживание загрузки изображений
+    const images = document.images;
+    for (let i = 0; i < images.length; i++) {
+        if (images[i].complete) {
+            incrementLoadedResources();
+        } else {
+            images[i].addEventListener('load', incrementLoadedResources);
+            images[i].addEventListener('error', incrementLoadedResources);
+        }
+    }
+
+    // Эмуляция загрузки основного контента
+    setTimeout(() => {
+        incrementLoadedResources();
+    }, 1000); // Задержка для имитации
+});
+
+
+
+
 if (document.body.classList.contains('awards-page')) {
     document.querySelectorAll('.arrow-left, .arrow-right').forEach(arrow => arrow.remove());
 }
@@ -210,22 +256,12 @@ settingsButton.addEventListener('click', () => {
     disableScroll();
 });
 
+
+
+
 const burger = document.getElementById('burger');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('#space-cover');
-
-function positionBurger() {
-    const menuWidth = menu.offsetWidth; // Получаем текущую ширину меню
-    const burgerWidth = burger.offsetWidth; // Получаем ширину гамбургера
-    const windowWidth = window.innerWidth; // Ширина окна
-
-    const leftPosition = windowWidth - menuWidth / 2 - burgerWidth / 2; // Рассчитываем центр меню
-    burger.style.left = `${leftPosition}px`;
-}
-
-// Устанавливаем начальное положение и обновляем при изменении размера окна
-positionBurger();
-window.addEventListener('resize', positionBurger);
 
 burger.addEventListener('click', () => {
     menu.classList.toggle('menu_active'); // Добавляем/убираем класс для меню
@@ -239,11 +275,27 @@ burger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', () => {
-    menu.classList.remove('menu_active'); // Закрываем меню
-    burger.classList.remove('hamburger_active'); // Убираем анимацию гамбургера
-    overlay.classList.remove('active'); // Убираем затемнение
-    enableScroll(); // Включаем прокрутку
+    menu.classList.remove('menu_active'); 
+    burger.classList.remove('hamburger_active'); 
+    overlay.classList.remove('active'); 
+    enableScroll(); 
 });
+
+function positionBurger() {
+    const menuWidth = menu.offsetWidth; 
+    const burgerWidth = burger.offsetWidth; 
+    const windowWidth = window.innerWidth; 
+
+    if (windowWidth <= 768) {
+        burger.style.right = '40px';
+    } else {
+        const leftPosition = windowWidth - menuWidth / 2 - burgerWidth / 2; 
+        burger.style.left = `${leftPosition}px`;
+    }
+}
+
+positionBurger();
+window.addEventListener('resize', positionBurger);
 
 
 // Видеопопап
