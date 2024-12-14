@@ -1,0 +1,89 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 9999;
+    transition: all 0.8s ease; /* Плавное исчезновение */
+}
+
+/* Контейнер волн */
+.wave-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px; /* Ширина контейнера */
+    height: 60px; /* Высота контейнера */
+    margin-bottom: 20px;
+}
+
+/* Волны */
+.wave {
+    width: 12px;
+    height: 20px;
+    background-color: #0ff;
+    border-radius: 50px;
+    animation: waveAnimation 1s ease-in-out infinite;
+}
+
+/* Задержка для каждой волны */
+.wave:nth-child(1) {
+    animation-delay: 0s;
+}
+.wave:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.wave:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.wave:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.wave:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+/* Анимация волн */
+@keyframes waveAnimation {
+    0%, 100% {
+        height: 20px; /* Начальная высота волны */
+        background-color: #0ff;
+    }
+    50% {
+        height: 40px; /* Пиковая высота волны */
+        background-color: #f0f;
+    }
+}
+
+/* Текст процентов */
+.loading-percentage {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Скрытие прелоадера после загрузки */
+.loading-screen.hidden {
+    transform: scaleY(0); /* Складываем прелоадер */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Основной контент */
+.your-page-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* Показываем основной контент */
+.your-page-content.visible {
+    opacity: 1;
+    visibility: visible;
+}
